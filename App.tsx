@@ -426,6 +426,8 @@ const App: React.FC = () => {
                   label="Target Dose (mg/L)" 
                   value={inputs.chemicalDose} 
                   onChange={(v: number) => handleInputChange('chemicalDose', v)} 
+                  highlight
+                  highlightColor="amber"
                 />
               </div>
             )}
@@ -631,6 +633,7 @@ const InputGroup = ({ label, value, onChange, step = 1, highlight = false, highl
     indigo: 'bg-indigo-50 border-indigo-200 focus:ring-2 focus:ring-indigo-400',
     slate: 'bg-slate-50 border-slate-200 focus:ring-2 focus:ring-slate-400',
     blue: 'bg-blue-50 border-blue-200 focus:ring-2 focus:ring-blue-400',
+    amber: 'bg-amber-50 border-amber-200 focus:ring-2 focus:ring-amber-400',
   };
 
   const labelStyles: any = {
@@ -638,6 +641,7 @@ const InputGroup = ({ label, value, onChange, step = 1, highlight = false, highl
     indigo: 'text-indigo-600',
     slate: 'text-slate-600',
     blue: 'text-blue-600',
+    amber: 'text-amber-600',
   };
 
   return (
